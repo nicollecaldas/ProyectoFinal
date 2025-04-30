@@ -9,7 +9,7 @@
      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
-     <link rel="stylesheet" href="estilos.css" 
+     <link rel="stylesheet" href="estilos.css"> 
 </head>
 <body>
     <header>
@@ -24,11 +24,21 @@
         <div> 
             <p>
                 Este proyecto presenta un programa para describir e identificar las zonas que pueden verse afectadas por el levantamiento del pavimento debido a las raíces de la arbolada urbana en el barrio la Francia, de la localidad de Puente Aranda en Bogotá D.C., departamento de Cundinamarca, Colombia.
-
+                <div>
                 En el barrio la Francia, más especificamente en el parque público y centro cultural (Ubicado entre la diagonal 5f bis A, la transversal 43b y la diagonal 5g bis A) se evidencia un problema de daño de infraestructura debido a las raices de la arbolada urbana que afectan las vías de acceso al lugar. El proyecto tiene como objetivo crear un software que permite identificar las zonas de riesgo y que permita conocer especies de árboles (endemicos) que no afecten la infraestuctura urbana. Tambien que beneficien a la comunidad y a la sostenibilidad.
+                </div>
             </p>
         </div>
-        <div> <div id="map"></div>
+        <div> 
+            <div id="map" style="height: 500px;"></div>
+            <script>
+                var map = L.map('map').setView([4.620296874189212, -74.10782324140276], 18);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 19,
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+            </script>
+        </div>
     </main>
     <footer>
         <div> </div>
