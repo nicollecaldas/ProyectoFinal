@@ -1,1 +1,103 @@
 #map { height: 180px; }
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color:linear-gradient(to right, #4CAF50, #8BC34A); /* Bicolor verde */ ;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Barra de navegación con fondo bicolor */
+.navbar {
+    width: 100%;
+    background: linear-gradient(to right, #4CAF50, #8BC34A); /* Bicolor verde */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar .logo h1 {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+}
+
+.navbar .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar .menu li {
+    margin: 0 15px;
+}
+
+.navbar .menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navbar .menu a:hover {
+    text-decoration: underline;
+}
+
+/* Banner bicolor para todas las páginas */
+.banner {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to right, #4CAF50, #8BC34A); /* Bicolor verde */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Estilos para la página principal */
+#index .banner {
+    background: linear-gradient(to right, #FFD700, #FF8C00); /* Bicolor dorado */
+}
+
+#index {
+    font-family: 'Verdana', sans-serif;
+    padding: 20px;
+    margin: 20px;
+    font-size: 18px;
+}
+
+/* Estilos para la página "Acerca de..." */
+#acerca .banner {
+    background: linear-gradient(to right, #FF6347, #FF4500); /* Bicolor tomate */
+}
+
+#acerca {
+    font-family: 'Georgia', serif;
+}
+
+/* Estilos para la página "Descripción" */
+#descripcion .banner {
+    background: linear-gradient(to right, #1E90FF, #00BFFF); /* Bicolor azul */
+}
+
+#descripcion {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Estilos para la página "Autor" */
+#autor .banner {
+    background: linear-gradient(to right, #FFD700, #FF8C00); /* Bicolor dorado */
+}
+
+#autor {
+    font-family: 'Times New Roman', Times, serif;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de...</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <div class="banner">
+            <h1>Acerca de...</h1>
+        </div>
+    </header>
+
+    <section id="acerca">
+        <p>En el barrio la Francia, más especificamente en el parque público y centro cultural (Ubicado entre la diagonal 5f bis A, la transversal 43b y la diagonal 5g bis A) se evidencia un problema de daño de infraestructura debido a las raices de la arbolada urbana que afectan las vías de acceso al lugar. El proyecto tiene como objetivo crear un software que permite identificar las zonas de riesgo y que permita conocer especies de árboles (endemicos) que no afecten la infraestuctura urbana. Tambien que beneficien a la comunidad y a la sostenibilidad.</p>
+    </section>
+    <section>
+        <div id="map" style="height: 500px;"></div>
+        <script>
+                var map = L.map('map').setView([4.620296874189212, -74.10782324140276], 18);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 19,
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+                
+                var polygon = L.polygon([
+                    [4.620144937073737, -74.10715889429954],
+                    [4.620080314926086, -74.10859030857824],
+                    [4.621582395895524, -74.10869482380853],
+                    [4.62156902846001, -74.1076460801086]
+                ]).addTo(map);
+            </script>
+    </section>
+
+</body>
+</html>
+
