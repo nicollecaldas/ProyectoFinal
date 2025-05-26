@@ -1,31 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;600&display=swap');
+
 #map { height: 180px; }
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2em;
+    background: #f9f6f1;
     margin: 0;
     padding: 0;
+    color: #4e4637;
 }
 
+/* Bloques principales estilo cottage */
+.titulo-fondo, .navbar, footer, main > div, .banner {
+    background: linear-gradient(135deg, #fce8d5 60%, #ffe696 100%);
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(120, 110, 90, 0.08);
+    margin: 28px auto;
+    padding: 28px 20px;
+    width: 90%;
+    max-width: 1200px;
+    border: 1.5px solid #e2d6c2;
+}
+
+/* Títulos cottage */
+.titulo-fondo h1, .navbar .logo h1, .banner {
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Ajustes para el header */
 header {
-    background-color:linear-gradient(to right, #4CAF50, #8BC34A); /* Bicolor verde */ ;
+    background: none;
     text-align: center;
-    padding: 20px 0;
+    padding: 0;
+    box-shadow: none;
 }
 
-/* Barra de navegación con fondo bicolor */
+/* Barra de navegación cottage */
 .navbar {
-    width: 100%;
-    background: linear-gradient(to right, #4CAF50, #8BC34A); /* Bicolor verde */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 14px 28px;
+    margin-bottom: 28px;
+    background: linear-gradient(90deg, #f2ede6 0%, #f3e8de 100%);
+    border: 1.5px solid #f7e9d1;
 }
 
 .navbar .logo h1 {
-    color: white;
-    font-size: 24px;
+    color: #7b6651;
+    font-size: 1.5em;
     margin: 0;
+    font-style: italic;
+    font-family: 'Dancing Script', cursive;
 }
 
 .navbar .menu {
@@ -36,68 +63,107 @@ header {
 }
 
 .navbar .menu li {
-    margin: 0 15px;
+    margin: 0 18px;
 }
 
 .navbar .menu a {
-    color: white;
+    color: #7b6651;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 1.1em;
+    font-family: 'Quicksand', sans-serif;
+    padding: 6px 14px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
 }
 
 .navbar .menu a:hover {
-    text-decoration: underline;
+    background: #e2d6c2;
+    color: #6d8a6b;
 }
 
-/* Banner bicolor para todas las páginas */
+/* Estilos para el mapa */
+#map {
+    height: 500px;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(120, 110, 90, 0.08);
+    margin: 20px 0;
+    border: 1.5px solid #e2d6c2;
+}
+
+/* Footer cottage */
+footer {
+    color: #7b6651;
+    text-align: center;
+    font-style: italic;
+    margin-top: 30px;
+    border-top: 1.5px solid #f7e9d1;
+    padding: 18px 0;
+    background: linear-gradient(135deg, #fce8d5 60%, #ffe696 100%);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+}
+
+/* Banner cottage */
 .banner {
-    width: 100%;
-    height: 200px;
-    background: linear-gradient(to right, #4CAF50, #8BC34A); /* Bicolor verde */
-    color: white;
+    background: linear-gradient(135deg, #fce8d5 60%, #ffe696 100%);
+    color: #4e4637;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 32px;
+    font-size: 2em;
     font-weight: bold;
+    border-radius: 18px;
+    margin: 28px auto;
+    padding: 36px 0;
+    width: 90%;
+    max-width: 1200px;
+    font-family: 'Dancing Script', cursive;
 }
 
-/* Estilos para la página principal */
-#index .banner {
-    background: linear-gradient(to right, #FFD700, #FF8C00); /* Bicolor dorado */
+/* Ajustes para páginas específicas */
+#index, #acerca, #descripcion, #autor {
+    background: none;
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+}
+.contenido-flex {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 32px auto;
+    max-width: 1200px;
+    width: 90%;
 }
 
-#index {
-    font-family: 'Verdana', sans-serif;
-    padding: 20px;
-    margin: 20px;
-    font-size: 18px;
+.mapa-lado {
+    flex: 1 1 45%;
+    min-width: 320px;
 }
 
-/* Estilos para la página "Acerca de..." */
-#acerca .banner {
-    background: linear-gradient(to right, #FF6347, #FF4500); /* Bicolor tomate */
+.info-lado {
+    flex: 1 1 55%;
+    min-width: 320px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #fce8d5 60%, #ffe696 100%);
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(120, 110, 90, 0.08);
+    padding: 32px;
+    color: #4e4637;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1em;
+}
+.imagenes-proyecto {
+    display: flex;
+    gap: 4%;
+    margin-top: 18px;
+    justify-content: center;
 }
 
-#acerca {
-    font-family: 'Georgia', serif;
-}
-
-/* Estilos para la página "Descripción" */
-#descripcion .banner {
-    background: linear-gradient(to right, #1E90FF, #00BFFF); /* Bicolor azul */
-}
-
-#descripcion {
-    font-family: 'Courier New', Courier, monospace;
-}
-
-/* Estilos para la página "Autor" */
-#autor .banner {
-    background: linear-gradient(to right, #FFD700, #FF8C00); /* Bicolor dorado */
-}
-
-#autor {
-    font-family: 'Times New Roman', Times, serif;
+.imagenes-proyecto img {
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(120, 110, 90, 0.10);
+    object-fit: cover;
 }
